@@ -1,3 +1,4 @@
+import { PRIMARY_COLOR } from '@/shared/styles/color.style';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Calendar, DateData } from 'react-native-calendars';
@@ -11,15 +12,15 @@ const CalendarScreen = () => {
   };
 
   const markedDates = {
-    '2025-05-15': { selected: true, selectedColor: '#42A5F5' },
-    '2025-05-16': { selected: true, selectedColor: '#42A5F5' },
+    '2025-05-15': { selected: true, selectedColor: PRIMARY_COLOR },
+    '2025-05-16': { selected: true, selectedColor: PRIMARY_COLOR },
     '2025-05-17': {
       selected: true,
       selectedColor: '#FFFFFF',
-      selectedTextColor: '#42A5F5',
+      selectedTextColor: PRIMARY_COLOR,
       customStyles: {
         container: {
-          borderColor: '#42A5F5',
+          borderColor: PRIMARY_COLOR,
           borderWidth: 1.5,
           borderRadius: 16,
         },
@@ -39,8 +40,14 @@ const CalendarScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.yearText}>2025년</Text>
-      <Text style={styles.monthText}>5월</Text>
+      <View
+        style={{
+          display: 'flex',
+        }}
+      >
+        <Text style={styles.yearText}>2025년</Text>
+        <Text style={styles.monthText}>5월</Text>
+      </View>
 
       <Calendar
         current={'2025-05-01'}
@@ -49,8 +56,8 @@ const CalendarScreen = () => {
         markedDates={markedDates}
         theme={{
           calendarBackground: '#fff',
-          todayTextColor: '#42A5F5',
-          arrowColor: '#42A5F5',
+          todayTextColor: PRIMARY_COLOR,
+          arrowColor: PRIMARY_COLOR,
           textDayFontWeight: '500',
           textMonthFontWeight: 'bold',
           textDayHeaderFontWeight: '600',

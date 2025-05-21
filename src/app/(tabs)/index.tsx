@@ -1,3 +1,7 @@
+import {
+  PRIMARY_COLOR,
+  PRIMARY_TRANSPARENT,
+} from '@/shared/styles/color.style';
 import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
 import {
@@ -66,8 +70,8 @@ const HomeScreen = () => {
 
       {/* 인기 자격증 */}
       <Text style={styles.sectionTitle}>
-        <Text style={{ color: '#2196F3', fontWeight: '600' }}>20대</Text>에게
-        가장 인기 많은 자격증
+        <Text style={{ color: PRIMARY_COLOR, fontWeight: '600' }}>20대</Text>
+        에게 가장 인기 많은 자격증
       </Text>
       {popularCerts.map((cert, i) => (
         <View key={i} style={styles.popularItem}>
@@ -104,7 +108,7 @@ const styles = StyleSheet.create({
   logo: {
     fontSize: 28,
     fontWeight: '700',
-    color: '#1976D2',
+    color: PRIMARY_COLOR,
   },
   search: {
     borderRadius: 24,
@@ -152,8 +156,8 @@ const styles = StyleSheet.create({
   popularTop: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#1976D2',
-    backgroundColor: '#E3F2FD',
+    color: PRIMARY_COLOR,
+    backgroundColor: PRIMARY_TRANSPARENT,
     paddingHorizontal: 12,
     paddingVertical: 4,
     borderRadius: 12,
@@ -165,7 +169,7 @@ const styles = StyleSheet.create({
   ddayItem: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    backgroundColor: '#E3F2FD',
+    backgroundColor: PRIMARY_TRANSPARENT,
     padding: 12,
     borderRadius: 12,
     marginBottom: 8,
@@ -177,7 +181,7 @@ const styles = StyleSheet.create({
   ddayText: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#1565C0',
+    color: PRIMARY_COLOR,
   },
 });
 
