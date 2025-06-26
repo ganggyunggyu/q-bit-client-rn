@@ -1,5 +1,6 @@
 {
   "expo": {
+    "owner": "ganggyunggyu",
     "name": "q-bit-client-rn",
     "slug": "q-bit-client-rn",
     "version": "1.0.0",
@@ -9,7 +10,11 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ganggyunggyu.qbitclientrn",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -37,6 +42,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "5a293a1f-0866-4ebe-b597-d37a3ddce9d7"
+      }
     }
   }
 }
