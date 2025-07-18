@@ -1,4 +1,8 @@
-import { BACKGROUND_COLOR, PRIMARY_COLOR, WHITE } from '@/styles/color';
+import {
+  BACKGROUND_NORMAL,
+  PRIMARY_COLOR,
+  WHITE,
+} from '@/shared/styles/color.style';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -10,13 +14,13 @@ export default function Index() {
   const getTopBg = () => {
     if (webviewPath === '/start') return PRIMARY_COLOR;
 
-    return BACKGROUND_COLOR;
+    return BACKGROUND_NORMAL;
   };
 
   const getBottomBg = () => {
     if (webviewPath === '/start') return PRIMARY_COLOR;
 
-    if (webviewPath.includes('onboarding')) return BACKGROUND_COLOR;
+    if (webviewPath.includes('onboarding')) return BACKGROUND_NORMAL;
 
     return WHITE;
   };
